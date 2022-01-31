@@ -1,0 +1,131 @@
+<!--Enunciado:
+
+Title: 'Todo es relativo en la vida'
+Declarar una etiqueta style
+Crear un título h1 con el siguiente texto 'Todo es relativo en la vida'
+Crear 10 párrafos con texto autogenerado
+Al segundo párrafo agregar la clase 'relativo'
+En la etiqueta style:
+Seleccionar los elementos párrafo que tienen la clase 'relativo'
+Establecer la posición en relativo
+Ancho: 600px
+Left: 20px
+Top: 20px
+Color de fondo: #ccc
+Borde: 1px solid #333
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .relativo {
+            /*toma como punto de medicion la posicion original del contenedor en el que fue definido*/
+            position: relative;
+            width: 600px;
+            left: 200px;
+            top: 200px;
+            background-color: #Ccc;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 20px;
+        }
+
+        .absoluto {
+            /*no toma en cuenta el contenedor que lo contiene, por lo tanto las referencias son desde lo que seria el eje 0,0*/
+            position: absolute;
+            width: 600px;
+            right: 100px;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            border: 1px solid #333;
+        }
+
+        .fix {
+            position: fixed;
+            top: 100px;
+            left: 0;
+        }
+
+        .iguales {
+            position: fixed;
+            top: 100px;
+            left: 200px;
+            width: 300px;
+            background-color: #444;
+        }
+
+        .flotar {
+            float: left;
+            width: 200px;
+        }
+    </style>
+    <title>Todo es relativo en la vida</title>
+</head>
+
+<body>
+    <h1>Todo es relativo en la vida</h1>
+    <p class="absoluto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita hic reprehenderit consequatur
+        voluptas id repellendus enim sunt impedit explicabo reiciendis quae voluptatibus, natus ex laboriosam aut.
+        Quibusdam exercitationem ipsam eos dolor ullam corporis suscipit eius inventore dolore nesciunt laudantium qui
+        doloremque temporibus sunt veniam cumque, beatae aliquid eligendi nostrum harum! Doloremque repudiandae impedit
+        distinctio vel hic labore quam numquam voluptates at accusantium quisquam quasi ipsa obcaecati quidem harum
+        deleniti, quis quibusdam eligendi unde error. Perferendis ipsa vel in laudantium consectetur, quis non,
+        possimus, maxime cum vitae libero similique! Accusamus ipsum qui modi architecto officia ut harum ducimus hic
+        dolorem labore!</p>
+    <p class="relativo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, veritatis, repudiandae illum
+        quam assumenda voluptatum esse corrupti voluptates voluptate dolores quos quod rem, beatae est quisquam in ipsam
+        aliquam tenetur maxime ab sequi cum dicta dolorem officia? Repudiandae debitis optio quis harum, provident porro
+        adipisci error id fuga laudantium quod suscipit illum tenetur soluta, dolores hic sint accusantium autem cumque
+        maiores! Ipsa accusantium officiis ut, natus libero illo quisquam distinctio accusamus, laboriosam suscipit
+        maxime. Quisquam consequuntur repudiandae quae exercitationem ex in, architecto enim praesentium delectus
+        voluptatibus et alias consequatur itaque quas voluptas. Nemo, error laborum! Reprehenderit doloribus earum
+        asperiores harum.</p>
+    <p class="iguales">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla et explicabo perspiciatis voluptates,
+        possimus, facere quibusdam aliquam eligendi numquam officia, aperiam unde eos consequuntur deserunt debitis ab
+        odit molestiae repellat sapiente obcaecati? Corrupti, reiciendis. Sunt qui provident cum dolorum maiores.
+        Accusantium necessitatibus facere, laudantium praesentium omnis quam odio dignissimos.</p>
+    <p class="flotar"> Flotar Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cumque aperiam. Et enim vero
+        officia quo
+        doloremque saepe id magnam incidunt aliquam reiciendis fugit dicta, ullam, quia possimus? Eaque dignissimos
+        fugiat rem veritatis beatae numquam aliquam eligendi corrupti porro voluptates?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita hic reprehenderit consequatur voluptas id
+        repellendus enim sunt impedit explicabo reiciendis quae voluptatibus, natus ex laboriosam aut. Quibusdam
+        exercitationem ipsam eos dolor ullam corporis suscipit eius inventore dolore nesciunt laudantium qui doloremque
+        temporibus sunt veniam cumque, beatae aliquid eligendi nostrum harum! Doloremque repudiandae impedit distinctio
+        vel hic labore quam numquam voluptates at accusantium quisquam quasi ipsa obcaecati quidem harum deleniti, quis
+        quibusdam eligendi unde error. Perferendis ipsa vel in laudantium consectetur, quis non, possimus, maxime cum
+        vitae libero similique! Accusamus ipsum qui modi architecto officia ut harum ducimus hic dolorem labore!</p>
+    <p class="iguales">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, veritatis, repudiandae illum
+        quam assumenda
+        voluptatum esse corrupti voluptates voluptate dolores quos quod rem, beatae est quisquam in ipsam aliquam
+        tenetur maxime ab sequi cum dicta dolorem officia? Repudiandae debitis optio quis harum, provident porro
+        adipisci error id fuga laudantium quod suscipit illum tenetur soluta, dolores hic sint accusantium autem cumque
+        maiores! Ipsa accusantium officiis ut, natus libero illo quisquam distinctio accusamus, laboriosam suscipit
+        maxime. Quisquam consequuntur repudiandae quae exercitationem ex in, architecto enim praesentium delectus
+        voluptatibus et alias consequatur itaque quas voluptas. Nemo, error laborum! Reprehenderit doloribus earum
+        asperiores harum.</p>
+    <p class="iguales">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla et explicabo perspiciatis voluptates,
+        possimus, facere quibusdam aliquam eligendi numquam officia, aperiam unde eos consequuntur deserunt debitis ab
+        odit molestiae repellat sapiente obcaecati? Corrupti, reiciendis. Sunt qui provident cum dolorum maiores.
+        Accusantium necessitatibus facere, laudantium praesentium omnis quam odio dignissimos.</p>
+    <p class="fix">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cumque aperiam. Et enim vero
+        officia quo
+        doloremque saepe id magnam incidunt aliquam reiciendis fugit dicta, ullam, quia possimus? Eaque dignissimos
+        fugiat rem veritatis beatae numquam aliquam eligendi corrupti porro voluptates?</p>
+</body>
+
+</html>

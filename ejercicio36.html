@@ -1,0 +1,96 @@
+<!-- 
+    PSEUDO ELEMENTOS:
+
+    Un pseudo elemento es una forma de seleccionar una parte de un elemento o subset de elementos seleccionado
+
+
+    ::after: Permite establecer un contenido al final del elemento/s seleccionado/s
+    ::before: Permite establecer un contenido al inicio del elemento/s seleccionado/s
+    ::first-letter: Permite seleccionar la primer letra de un texto
+    ::first-line: Permite seleccionar la primer línea de un texto
+    ::selection: Permite seleccionar la selección que hace el usuario
+
+    Para before y after podemos utilizar la propiedad content para establecer un contenido (MDN)
+-->
+
+<!--
+    Enunciado: 
+    Title: Amamos los pseudo elementos
+    Declarar una etiqueta style
+    Crear un título h1 con el siguiente texto 'Amamos los pseudo elementos'
+    Crear 5 párrafos con texto autogenerado
+    En la etiqueta style:
+    Seleccionar todos los párrafos por nombre de etiqueta:
+    Pseudolemento de selección:
+    Color de fondo: rosa
+    Color de tipografía: blanco
+    Cuerpo de la tipografía: negrita
+    Pseudolemento de primer letra:
+    Tamaño de tipografía: 30px
+    Cuerpo de la tipografía: negrita
+    Color de tipografía: rojo
+    Padding: 20px
+    Pseudolemento de primer linea:
+    Estilo de texto: itálico
+    Pseudolemento de fin de elemento (after):
+    Contenido (propiedad content): 'FIN DE LA FIESTA'
+    Cuerpo de la tipografía: negrita
+    Color de tipografía: rojo
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*esta accion es cuando se sombre especificamente el parrafo*/
+        p::selection {
+            background-color: pink;
+            color: white;
+        }
+
+        p::first-letter {
+            font-size: 30px;
+            font-style: bold;
+            color: rgb(110, 0, 110);
+            padding: 2px;
+        }
+
+        p::first-line {
+            font-style: italic;
+        }
+
+        p::after {
+            content: 'FIN DE LA FIESTA';
+            font-style: bold;
+            color: rgb(184, 22, 170);
+        }
+    </style>
+    <title>Amamos los pseudo elementos</title>
+</head>
+
+<body>
+    <h1>Amamos los pseudo elementos</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam placeat voluptatem deleniti minus laboriosam
+        molestias praesentium obcaecati eius, nemo animi necessitatibus. Illum esse voluptas velit adipisci facere,
+        debitis asperiores ipsum necessitatibus explicabo tempora facilis sequi quis sapiente iste perspiciatis error
+        laboriosam magni harum autem? Itaque adipisci nobis numquam sed dolor?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, unde.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores fugit excepturi cumque officiis nulla
+        consequuntur beatae alias nobis, accusamus minima reprehenderit quo aspernatur dolorum omnis optio, facere ex
+        reiciendis earum, quis corrupti nemo minus distinctio quas fugiat? Obcaecati ex quam, similique fuga nemo
+        voluptatem alias fugiat voluptates libero officiis voluptatum vel veritatis neque amet explicabo deserunt beatae
+        veniam porro consequatur? Atque officia beatae, repellendus expedita sed consequatur! Dolore cupiditate hic
+        reprehenderit ut molestias adipisci maxime quis. Facere quos consectetur quibusdam expedita error provident, in
+        atque, animi id tenetur mollitia obcaecati nisi ducimus eligendi distinctio reiciendis placeat ab soluta, iure
+        possimus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, modi qui temporibus porro nihil voluptatem
+        aspernatur sequi. Vitae, sequi. Magnam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis earum nemo dolores recusandae dolor sint, quam
+        saepe nihil accusantium velit aperiam numquam nostrum laudantium illum possimus culpa perspiciatis blanditiis
+        ex?</p>
+</body>
+</html>

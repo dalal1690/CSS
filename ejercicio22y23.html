@@ -1,0 +1,96 @@
+<!--Enunciado:
+Title: Esto es muy border
+Declarar una etiqueta style
+Crear un título h1 con el siguiente texto 'Esto es muy border'
+Crear una línea
+Crear un div con texto autogenerado
+Crear un elemento section texto autogenerado
+Crear un título h2 con texto autogenerado
+En la etiqueta style:
+Establecer el siguiente borde al elemento linea:
+Ancho: 2px
+Diseño: solid
+Color: rojo
+Utilizar sólo una propiedad border
+Establecer el siguiente borde al elemento div:
+Ancho: 3px
+Diseño: dashed
+Color: #ccc
+Utilizar las propiedades de border width, style y color
+Establecer el siguiente borde inferior al elemento section:
+Ancho: 1px
+Diseño: groove
+Color: blue
+Establecer los siguientes bordes al título h2:
+Borde superior:
+Ancho: 1px
+Diseño: solid
+Color: orange
+Borde inferior:
+Ancho: 2px
+Diseño: groove
+Color: red
+Borde izquierdo:
+Ancho: 3px
+Diseño: dashed
+Color: green
+Borde derecho:
+Ancho: 4px
+Diseño: dotted
+Color: blue
+Utilizar las propiedades width, style y color individual para cada borde (ejemplo: border-top-width, etc)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        hr{
+            border: 2px solid red ;
+        }
+        div{
+            border-width: 3px;
+            border-style: dashed;
+            border-color: #ccc;
+        }
+        section{
+            padding-bottom: 10px ;
+            border-bottom-width: 1px ;
+            border-bottom-style: groove;
+            border-bottom-color: blue;
+        }
+        h2{
+            border-top: 1px solid orange;
+            border-right: 2px groove red;
+            border-bottom: 3px dashed magenta;
+            border-left: 4px dotted purple;
+        }
+        p{
+            border-style: inset; 
+            padding-top: 20px;
+            padding-bottom: 25px;
+            padding-left: 30px;
+            padding-right: 40px;
+        }
+
+    </style>
+    <title>Esto es muy border</title>
+</head>
+<body>
+    <h1>Esto es muy border</h1>
+    <hr>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quis ea officiis, consectetur corporis esse doloribus odit qui aspernatur eos vitae porro necessitatibus accusamus ab quaerat eligendi iure. Porro cum consequatur unde illum? Distinctio, asperiores dolores. Eos aut fuga alias blanditiis, veniam laboriosam architecto fugiat repudiandae totam, voluptates, a sunt. Esse culpa mollitia, iure voluptatum qui labore sed porro repellendus minima odio deleniti inventore repellat, quo ea accusamus sequi omnis! Sed, consectetur harum praesentium velit dolores accusamus enim eligendi corrupti beatae minus deleniti mollitia soluta consequatur voluptates ipsam nesciunt, officiis numquam in ratione impedit, inventore quam corporis error qui. Doloribus?
+    </div>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sit?
+    </section>
+    <br><br>
+    <h2>Lorem, ipsum.</h2>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quasi?</p>    
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!--
+    Pseudo clases
+    ----------------------------------
+    Las pseudo clases describen un estado particular de un elemento
+    Existe una gran cantidad de pseudo clases y pueden encontrar el listado completo en el sitio de MDN
+    En este curso vamos a utilizar las siguientes pseudo clases:
+    :active: Selecciona un elemento que esta activo (por ejemplo un link al que le estamos haciendo click)
+    🔗 Representa un hipervinculo que no fue visitado
+    :visited: Representa un hipervinculo que fue visitado
+    :hover: Selecciona un elemento al que estamos posicionando el cursor encima
+    :first-child: Representa el primer elemento
+    :last-child: Representa el último elemento
+    :nth-child(): Podemos seleccionar un elemento en cualquier posición nth-child(2).
+    También podemos utilizar los valores odd para representar los impares y even para los pares
+-->
+
+<!--
+
+    selector:pseudoclase { propiedad: valor; }
+
+
+    EJEMPLO:
+
+    a:link {
+  color: blue;
+}
+
+a:visited {
+  color: violet;
+}
+
+li:first-child {
+  color: red;
+}
+
+tr:nth-child(odd) {
+  background-color: gray;
+}
+
+
+
+Crear un elemento nav
+Crear los siguientes hipervinculos con el href=#:
+Home
+About
+Contact
+News
+Crear una lista desordenada con 5 elementos con texto autogenerado
+En la etiqueta style:
+Seleccionar el elemento body y establecer la siguiente propiedad:
+Família tipográfica: Arial, Helvetica, sans-serif
+Seleccionar todos los hipervínculos que estan dentro del elemento nav
+Color de fondo: #C2FAFE
+Border: 2px solid #0B9EA8
+Padding: 10px
+Decorado de texto: none
+Color de texto: #0B9EA8
+Seleccionar las siguientes pseudo clases:
+hover:
+Decorado de texto:underline
+Color de fondo: #0B9EA8
+Color de texto: blanco
+active:
+Color de fondo: #046A71
+Seleccionar todos los elementos list items y establecer las siguientes propiedades:
+Padding: 20px
+Color de fondo: #eee
+Borde: 1px solid black
+Seleccionar las siguientes pseudo clases:
+hover:
+Color de fondo: #ccc
+Tamaño de tipografía: 120%
+last-child:
+Borde: none
+first-child:
+Cuerpo de tipografía: negrita
+active:
+Decorado de texto: tachado
+Seleccionar el elemento nav y establecer la siguiente propiedad:
+Margen inferior: 50px
+
+
+CURSOR
+-------------------
+Por medio de la propiedad cursor cambiamos la forma en al que se ve el cursor en nuestros documentos/elementos
+Esta propiedad acepta los siguientes valores:
+auto: El browser define como se tiene que ver según el elemento o acción que pueda hacer
+crosshair: Es una cruz como si fuera un selector
+default: Es el cursor por defecto, generalmente es una flecha
+pointer: Es la manito que vemos al hacer click en un elemento
+move: Con este cursor le damos a entender al usuario que puede hacer drag de un elemento ya que son flechas para distintos lados
+text: Es el selector de texto como si queremos escribir en algún input
+wait: Es una forma de decirle al usuario que tiene que esperar que alguna acción se termine
+help: Es un signo de pregunta como podemos ver si queremos ayuda o más información sobre un tema
+Utilizando estos cursores podemos darle a entender al usuario que acción se puede realizar, por ejemplo si ponemos la manito arriba de un elemento el usuario asume que puede hacer click (por ahora sólo es un efecto visual)
+Para saber más de esta propiedad pueden leer el sitio de MDN
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            cursor: move;
+        }
+        nav {
+            margin-bottom: 50px;
+        }
+
+        ol, ul {
+            /*Quitar los numeros y bullets*/
+            list-style-type: none;
+        }
+
+        nav a {
+            background-color: #C2FAFE;
+            border: 2px solid #0B9EA8;
+            padding: 10px;
+            text-decoration: none;
+            color: #0B9EA8;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+            background-color: #0B9EA8;
+            cursor:pointer;
+        }
+
+        a :active {
+            background-color: #046A71;
+        }
+
+        li {
+            padding: 20px;
+            background-color: #eee;
+            border: 1px solid black;
+        }
+
+        li:hover {
+            background-color: #ccc;
+            font-size: 120%;
+        }
+
+        li:last-child {
+            border: none;
+        }
+
+        li:active {
+            text-decoration: line-through;
+        }
+    </style>
+    <title>pseudoclase</title>
+</head>
+
+<body>
+    <h1>PESUDOCLASE</h1>
+    <nav>
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">News</a></li>
+        </ol>
+    </nav>
+    <nav>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

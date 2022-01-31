@@ -1,0 +1,161 @@
+<!--
+    Enunciado:
+    resources: 
+    para ver si una propiedad de css se puede usar en cierto buscardor: 
+    https://caniuse.com/?search=text-shadow
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            word-spacing: 10px;
+            text-decoration: underline dotted rosybrown;
+            /*
+                Primer parámetro el tipo de decorado
+                Segundo parámetro el tipo de línea (más sobre esto cuando vemos bordes)
+                Finalmente establecemos el color de la línea
+            */
+            /* espaciado de letras: 
+                Para manejar la distancia entre letras utilizamos letter-spacing
+                Para manejar la distancia entre letras utilizamos word-spacing
+            */
+        }
+        h3{
+            text-decoration: underline;
+        }
+        p{
+            text-transform: capitalize;
+        }
+        .p-derecha{
+            text-align: right;
+            text-decoration: overline;
+        }
+        .p-izquierda{
+            text-align: left;
+            text-decoration: line-through;
+        }
+        .p-justificado{
+            text-align: justify;
+            text-decoration: underline wavy blue;
+        }
+        #links{
+            text-align: center;
+        }
+        li{
+            text-align: center;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }   
+        .identado{
+            text-indent: 100px;
+            text-indent: 80px;
+            padding: 0 100px 0 100px;
+            margin: auto;
+            text-align: justify;
+            font-weight: 500;
+            line-height: 30px;
+        }  
+        .overline{
+            color: grey;
+            text-align: right;
+            text-decoration: overline grey;
+            margin: auto;
+            padding-right: 100px;
+            font-style: oblique;
+            font-weight: 100;
+            line-height: 30px;
+        }        
+        h4{
+            padding-left: 100px; 
+            text-transform: uppercase;
+        }
+        .shadow{
+            /* https://www.cssportal.com/css3-text-shadow-generator/ */
+            /* offset-x | offset-y | blur-radius | color */
+            color: rgb(209, 0, 105);
+            text-shadow: 0px 0px 20px hotpink;
+            margin: auto;
+            padding: 0 100px 0 100px;
+        }
+
+
+    </style>
+    <title>ALINEANOS Y TEXT TRANSFORMATION</title>
+</head>
+<body>
+    <!--
+- Por medio de la propiedad text-transform podemos transformar las mayúsculas y minísculas de nuestros textos
+- A diferencia de lo que venimos viendo en este caso se utiliza text en lugar de font ya que hace referencia al texto y no a la tipografía
+- Acepta los siguientes valores: uppercase: pasa todo el texto a mayúscula lowercase: pasa todo el texto a minúscula capitalize: convierte la primer letra de cada palabra a mayúscula 
+    -->
+    <div>
+        <h1>Property: text-transform</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ullam repellendus? Laudantium eligendi odit praesentium nisi expedita iure provident voluptas dolores id aut error magnam deserunt, maiores facere exercitationem tenetur?
+        </p>
+    </div>
+    <div>
+        <h2>Alineados de texto y decorado</h2>
+        <hr>
+        <h3>Hacia la derecha</h3>
+        <p class="p-derecha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sit est? Corrupti voluptatibus ratione voluptas, unde animi quaerat magnam aliquam.</p>
+        <br><br>
+        <h3>Hacia la izquierda</h3>
+        <p class="p-izquierda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sit est? Corrupti voluptatibus ratione voluptas, unde animi quaerat magnam aliquam.</p>
+        <h3>Justificado</h3>
+        <p class="p-justificado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio repellendus eveniet, dolore incidunt eligendi mollitia tempora sed quis quasi nam at unde. Aut cumque velit doloremque temporibus voluptatibus, aperiam consequuntur cupiditate culpa quas eaque nostrum excepturi hic iusto doloribus saepe sit quod, ab a voluptates fugiat? Explicabo et esse ipsam quas magnam eos mollitia placeat assumenda vitae nisi. Ut quia necessitatibus tempora? Distinctio deleniti, ea ut veniam sit aspernatur eos officiis nesciunt, ipsa facilis soluta delectus quisquam atque commodi nobis recusandae debitis quos minima! Impedit neque, non repudiandae dignissimos quasi voluptate laborum ullam expedita vel, esse in distinctio assumenda vero.</p>
+    </div>
+    <div>
+        <h3 id="links">Links</h3>
+        <ul>
+            <li><a href="http://google.com"> Google </a></li>
+            <li><a href="http://facebook.com"> Facebook </a></li>
+            <li><a href="http://twitter.com"> Twiter </a></li>
+        </ul>
+    </div>
+    <div>
+        <h4>Identado</h4>
+        <p class="identado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos itaque quisquam similique tempore, nostrum suscipit ut eos odio, maiores quas, iusto dignissimos facilis est minima! Eum eligendi obcaecati accusamus reprehenderit natus consequuntur. Doloremque adipisci magni neque, vero facilis voluptates deserunt odit consequatur veritatis placeat! Ratione dolores est temporibus. Repellat odit, amet fuga obcaecati, sed laboriosam quia quidem nostrum doloribus voluptate in dolorum. Quae mollitia qui veniam magnam voluptatibus accusamus debitis tempora magni non odit consequuntur ea ullam delectus velit, rem, labore nihil deserunt itaque possimus quas perspiciatis ipsa, quidem laudantium? Nostrum facilis facere unde ex eveniet consequatur nemo iusto?</p>
+        <br>
+        <p class="overline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, porro.</p>
+    </div>  
+    <br><br> 
+
+    <!-- TEXT SHADOW:
+    El primer parámetro maneja el eje x de nuestra sombra, es decir que va de izquierda a derecha
+    El segundo parámetro maneja el eje, es decir que va de arriba a abajo
+    El tercer parámetro maneja el blur (difuminar) de la sombra
+    El cuarto parámetro es el color de la sombra
+
+    sintaxis de esta propiedad: 
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px black;
+
+    /* color | offset-x | offset-y | blur-radius */
+    text-shadow: #CCC 1px 0 10px;
+
+    /* offset-x | offset-y | color */
+    text-shadow: 5px 5px #558ABB;
+
+    /* color | offset-x | offset-y */
+    text-shadow: white 2px 5px;
+
+    /* offset-x | offset-y
+    /* Se usan los valores predeterminados para color y blur-radius */
+    text-shadow: 5px 10px;
+
+    -->
+
+    <p class="shadow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia pariatur corrupti quasi dolor facere aspernatur eum velit cumque obcaecati nobis eveniet doloremque deleniti, dignissimos sint molestiae harum sunt, omnis perferendis? Illo porro magni, repellendus odio doloribus atque distinctio perspiciatis?</p>
+    <br><br>
+</body>
+</html>

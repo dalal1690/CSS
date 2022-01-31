@@ -1,0 +1,43 @@
+<!--
+    Enunciado:
+    Crear la siguiente estructura:
+    Crear una carpeta con el nombre ej18
+    Crear una carpeta con el nombre img
+    Copiar la siguiente foto css.png
+    Crear un documento HTML con el nombre index.html
+-->
+<!--
+    Alineado Vertical
+    Algo común es creer que esta propiedad nos permite alinear los textos de forma vertical en los elemntos en bloque pero no funciona de esa forma
+    Esta propiedad nos permite alinear el contenido de los elementos en línea
+    Cómo sabemos las imágenes son elementos en línea al igual que los spans, hipervínculos, etc
+    Si dentro de un párrafo tenemos una imágen, texto y otros elementos en linea, podemos establecer como va a ser la relación entre todos estos elementos que son hijos del párrafo
+    De esta forma podemos hacer que un texto este bien alineado a una foto
+    Un buen sitio para leer sobre este tema es css tricks (en inglés)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineate de una vez!</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        p{
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alineate de una vez!</h1>
+    <p><img src="img/eas.favicon.svg" alt="FAVICON DE EAS" height="80px">Alineando el logo</p>    
+</body>
+</html>

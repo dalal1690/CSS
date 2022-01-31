@@ -1,0 +1,81 @@
+<!--
+    Enunciado:
+    Title: Negrita
+    Copiar todo el documento anterior (index10.html)
+    Cambiar el contenido del título h1 por 'Negrita'
+    Agregar a los parrafos existentes:
+    3 elementos span (entre todos los párrafos como para resaltar una parte)
+    Estos span sólo tienen que seleccionar parte del texto que vos quieras del párrafo
+    En la etiqueta style:
+    Definir que los elementos span tienen su texto en negrita
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        span {
+            font-weight: 800;
+            ;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .oblique {
+            font-style: oblique;
+        }
+
+        section {
+            font-style: oblique;
+            font-size: 25px;
+            color: lightcoral;
+            font-weight: 500;
+        }
+
+        .inherit {
+            font-style: inherit;
+        }
+
+        .normal {
+            font-style: normal;
+        }
+        .initial{
+            font-style: initial;
+        }
+        
+    </style>
+    <title>Negritaa e italica</title>
+</head>
+
+<body>
+    <h1>Negrita e italica</h1>
+    <hr>
+    <h2>Lorem, ipsum.</h2>
+    <p>Lorem, ipsum dolor <span>sit amet consectetur </span> adipisicing elit. Fuga, accusantium?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, <span>adipisicing elit</span>. Corrupti, porro!</p>
+    <p>Lorem ipsum dolor <span>sit amet.</span></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p class="oblique">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium?</p>
+    <section>
+        <p class="inherit">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, porro!</p>
+        <!-- it’s to inherit a CSS property from the parent element.
+        In this case the properties were set to the section, so the p will inherit them-->
+    </section>
+    <p class="normal">Lorem ipsum dolor sit amet.</p>
+    <section>
+        <p class="initial">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <!--initial	Sets this property to its default value-->
+    </section>
+
+</body>
+
+</html>
